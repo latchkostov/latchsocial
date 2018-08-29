@@ -5,11 +5,11 @@ import { FriendsComponent } from './friends.component';
 
 const routes: Routes = [
     {
-        path: '', children: [
-            { path: 'list', component: ListFriendsComponent }
+        path: '', component: FriendsComponent, children: [
+            { path: 'list', pathMatch: 'full', component: ListFriendsComponent },
+            { path: '', component: ListFriendsComponent }
         ]
-    },
-    { path: '**', component: ListFriendsComponent }
+    }
 ];
 
 @NgModule({

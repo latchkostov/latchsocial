@@ -15,8 +15,7 @@ import { FriendsModule } from '../friends/friends.module';
   providers: [],
   bootstrap: [],
   exports: [
-    NavModule,
-    FriendsModule
+    NavModule
   ]
 })
 export class CoreModule { }
