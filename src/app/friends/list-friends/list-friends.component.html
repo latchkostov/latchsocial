@@ -1,3 +1,8 @@
-<p>
-  list-friends works!
-</p>
+<button (click)="addFriend()">Add Friend</button>
+<ul>
+  <li *ngFor="let friend of friends | async">
+      <pre>{{ friend | json }}</pre>
+      <button (click)="editAge(friend, 50)">Set age to 50</button>
+      <button (click)="deleteFriend(friend)">Delete</button>
+  </li>
+</ul>

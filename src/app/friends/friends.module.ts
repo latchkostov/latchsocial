@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { ListFriendsComponent } from './list-friends/list-friends.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FriendsComponent } from './friends.component';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
     {
@@ -18,7 +19,8 @@ const routes: Routes = [
       FriendsComponent
   ],
   imports: [
-      RouterModule.forChild(routes)
+      RouterModule.forChild(routes),
+      SharedModule
   ],
   providers: [],
   bootstrap: [],

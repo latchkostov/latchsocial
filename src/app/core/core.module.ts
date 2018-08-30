@@ -1,16 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from 'angularfire2';
 import { SharedModule } from '../shared/shared.module';
 import { NavModule } from '../nav/nav.module';
-import { FriendsModule } from '../friends/friends.module';
+import { environment } from '../../environments/environment';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 @NgModule({
   declarations: [
   ],
   imports: [
-    BrowserModule,
     SharedModule,
-    NavModule
+    NavModule,
+    AngularFireModule.initializeApp(environment.firebase, 'latchsocial'),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [],

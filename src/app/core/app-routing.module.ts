@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
@@ -13,7 +12,6 @@ const routes: Routes = [
     HomeComponent
   ],
   imports: [
-    BrowserModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
